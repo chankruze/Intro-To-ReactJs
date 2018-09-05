@@ -14,21 +14,33 @@
           // ReactDOM.render(             
           //   <div>First ReactDOM Render</div>,              
           //   document.getElementById("root")          
-          // )
-          
+          //
+		  
 //additional render() calls
 
-    var num = 0;
+//     var num = 0;
 
-    function updateNum(){
+//     function updateNum(){
 
-        ReactDOM.render(
-            <div>{num++}</div>,
-            document.getElementById("root")
-        )
+//         ReactDOM.render(
+//             <div>{num++}</div>,
+//             document.getElementById("root")
+//         )
+//     }
+
+//    setInterval(updateNum,100)
+
+// Functional Component
+function HelloWorld(){
+        return <h1>Hello World!</h1>
     }
+// You can use the React Component in JSX by creating an HTML tag with the same name as the React Component    
+    var element = <HelloWorld/>
 
-   setInterval(updateNum,100)      
+    ReactDOM.render(
+        element,
+        document.getElementById("root")
+    )
   </script>
 </body>
 
